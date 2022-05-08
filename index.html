@@ -138,7 +138,7 @@
                 <ul class="navbar-nav mb-2 mb-lg-0 align-self-start">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">iPhone</a>
-                        <ul class="dropdown-menu dropdown-menu-dark rounded-3">
+                        <ul class="dropdown-menu dropdown-menu-dark bg-night rounded-3">
                             <li><a class="dropdown-item" href="#">iPhone 13 Pro Max</a></li>
                             <li><a class="dropdown-item" href="#">iPhone 13 Pro</a></li>
                             <li><a class="dropdown-item" href="#">iPhone 13</a></li>
@@ -157,7 +157,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">iPad</a>
-                        <ul class="dropdown-menu dropdown-menu-dark rounded-3">
+                        <ul class="dropdown-menu dropdown-menu-dark bg-night rounded-3">
                             <li><a class="dropdown-item" href="#">Apple iPad</a></li>
                             <li><a class="dropdown-item" href="#">Apple iPad Air</a></li>
                             <li><a class="dropdown-item" href="#">Apple iPad Pro</a></li>
@@ -166,7 +166,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Mac</a>
-                        <ul class="dropdown-menu dropdown-menu-dark rounded-3">
+                        <ul class="dropdown-menu dropdown-menu-dark bg-night rounded-3">
                             <li><a class="dropdown-item" href="#">MacBook Pro</a></li>
                             <li><a class="dropdown-item" href="#">MacBook Air</a></li>
                             <li><a class="dropdown-item" href="#">Mac mini</a></li>
@@ -176,7 +176,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Apple Watch</a>
-                        <ul class="dropdown-menu dropdown-menu-dark rounded-3">
+                        <ul class="dropdown-menu dropdown-menu-dark bg-night rounded-3">
                             <li><a class="dropdown-item" href="#">Apple Watch Series 7</a></li>
                             <li><a class="dropdown-item" href="#">Apple Watch SE</a></li>
                             <li><a class="dropdown-item" href="#">Apple Watch Series 6</a></li>
@@ -185,7 +185,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">AirPods</a>
-                        <ul class="dropdown-menu dropdown-menu-dark rounded-3">
+                        <ul class="dropdown-menu dropdown-menu-dark bg-night rounded-3">
                             <li><a class="dropdown-item" href="#">Apple AirPods</a></li>
                             <li><a class="dropdown-item" href="#">Apple AirPods Pro</a></li>
                             <li><a class="dropdown-item" href="#">Apple AirPods Max</a></li>
@@ -195,7 +195,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Accessories</a>
-                        <ul class="dropdown-menu dropdown-menu-dark rounded-3">
+                        <ul class="dropdown-menu dropdown-menu-dark bg-night rounded-3">
                             <li><a class="dropdown-item" href="#">Accessories for iPhone</a></li>
                             <li><a class="dropdown-item" href="#">Accessories for iPad</a></li>
                             <li><a class="dropdown-item" href="#">Accessories for Mac</a></li>
@@ -229,7 +229,7 @@
                                 class="btn btn-sm rounded-3 btn-outline-warning fs-5  ms-3 dropdown-toggle">
                             <i class="bi-person-fill"></i> Oliver
                         </button>
-                            <ul class="dropdown-menu dropdown-menu-dark mt-1 py-1">
+                            <ul class="dropdown-menu dropdown-menu-dark bg-night mt-1 py-1">
                             <li><a href="#" class="dropdown-item"><i class="bi-bag-check"></i> My orders</a></li>
                             <li><a href="#" class="dropdown-item"><i class="bi-sliders"></i> Settings</a></li>
                             <li>
@@ -769,24 +769,6 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
 <script src="js/slick-config.js"></script>
-<script>
-    let loginPopover = new bootstrap.Popover(
-        document.querySelector("#log-in-btn-popover"),
-        {
-            html: true,
-            placement: "bottom",
-            sanitize: false,
-            content: `
-<label for="log-in-email-input" class="text-light">Email:</label><br>
-<input type="email" class="form-control mb-1 p-1 px-2" id="log-in-email-input" placeholder="name@example.com">\
-
-<label for="log-in-pw-input" class="text-light">Password:</label><br>
-<input type="password" class="form-control p-1 px-2" id="log-in-pw-input" placeholder="********">
-<a href="#" class="link-warning">Forgot Password?</a>
-<button type="submit" class="btn btn-sm btn-warning mt-2 w-100">Log In</button>
-`
-        }
-    );
-</script>
+<script src="js/popovers-config.js"></script>
 </body>
 </html>
