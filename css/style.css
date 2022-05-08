@@ -1,0 +1,72 @@
+.bg-night {
+    background: #1d1d1d;
+}
+
+.lh-0 {
+    line-height: 0;
+}
+
+.dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
+    background-color: var(--bs-warning);
+}
+
+.dropdown-menu-dark {
+    background: #1d1d1d;
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.form-control:focus, button:focus {
+    box-shadow: 0 0 0 0.25rem rgb(255 193 7 / 25%) !important;
+}
+
+#carousel-promo img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.slick-carousel .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -1rem;
+    z-index: 2;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+.slick-arrow {
+    cursor: pointer;
+}
+
+.slick-prev {
+    margin-left: -0.3rem;
+}
+
+.slick-next {
+    margin-right: -0.3rem;
+}
+
+.slick-disabled {
+    opacity: .4;
+    cursor: auto;
+}
+
+.slick-slide:hover {
+    transition-duration: .3s;
+    transform: scale(1.01);
+}
+
+.popover {
+    background: #1d1d1d;
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.popover-arrow::after {
+    border-bottom-color: rgba(255, 255, 255, .2)!important;
+}
