@@ -6,6 +6,11 @@
     line-height: 0;
 }
 
+.form-check-input:checked {
+    background-color: var(--bs-warning);
+    border-color: var(--bs-warning);
+}
+
 .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
     background-color: var(--bs-warning);
 }
