@@ -2,8 +2,8 @@ $(document).ready(function () {
     $('.slick-carousel').slick({
         autoplay: false,
         infinite: false,
-        prevArrow: '<div class="slick-prev text-light text-center fs-2 lh-0 start-0"><i class="bi-chevron-left"></i></div>',
-        nextArrow: '<div class="slick-next text-light text-center fs-2 lh-0 end-0"><i class="bi-chevron-right"></i></div>',
+        prevArrow: '<div class="slick-prev"><i class="bi-chevron-left"></i></div>',
+        nextArrow: '<div class="slick-next"><i class="bi-chevron-right"></i></div>',
         mobileFirst: true,
         responsive: [
             {

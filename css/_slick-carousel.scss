@@ -1,0 +1,38 @@
+.slick-carousel .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -1rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slick-prev {
+  color: $light;
+  text-align: center;
+  line-height: 0;
+  left: 0;
+  font-size: 2rem;
+  margin-left: -0.3rem;
+}
+
+.slick-next {
+  color: $light;
+  text-align: center;
+  line-height: 0;
+  right: 0;
+  font-size: 2rem;
+  margin-right: -0.3rem;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.slick-disabled {
+  opacity: .4;
+  cursor: auto;
+}

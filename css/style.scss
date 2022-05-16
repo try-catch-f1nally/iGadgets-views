@@ -1,0 +1,81 @@
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
+@import "../node_modules/slick-carousel/slick/slick";
+
+@import "slick-carousel";
+
+body, html {
+  height: 100%;
+}
+
+body {
+  padding-top: 4rem;
+}
+
+.lh-0 {
+  line-height: 0;
+}
+
+.popover {
+  background: $dark;
+}
+
+:focus-visible {
+  outline: 0;
+}
+
+#carousel-promo img {
+  object-fit: cover;
+  height: 500px;
+}
+
+header .navbar {
+  box-shadow: 0 2px 5px $dark;
+}
+
+footer {
+  box-shadow: 0 -2px 3px $dark;
+}
+
+.form-check-input, .form-check-input + label {
+  cursor: pointer;
+}
+
+.form-check-input:checked + label {
+  color: $primary;
+}
+
+.form-check-input.check-invert[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+.card-transition .card:hover {
+  transition-duration: .3s;
+  transform: scale(1.01);
+  opacity: .9;
+}
+
+@include media-breakpoint-up(lg) {
+  #border-left-radius-lg-0 {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+  }
+
+  #border-right-radius-lg-0 {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+  }
+}
+
+@include media-breakpoint-between(md, lg) {
+  header .navbar .navbar-nav {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .products-images img {
+    width: 90px;
+  }
+}

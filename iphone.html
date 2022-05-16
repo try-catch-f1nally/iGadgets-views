@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iGadgets &ndash; Apple Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column bg-black text-light">
+
+<header>
+    <!-- MODALS -->
+    <div class="modal fade" id="search-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="input-group">
+                    <input type="text" class="form-control-lg border-0 flex-grow-1" placeholder="Search...">
+                    <button class="btn" type="button" data-bs-dismiss="modal"><i class="bi-x-lg"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cart-modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title">Shopping Cart</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <img class="align-self-start me-1" width="140" src="img/products/iphone-13-midnight.jpg" alt="">
+                        <div class="d-flex flex-column justify-content-between w-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h5>iPhone 13 128gb Midnight</h5>
+                                    <small class="bg-secondary px-1">ART:791575</small>
+                                </div>
+                                <button class="btn text-danger text-opacity-75 fs-5 lh-0 p-0 ps-1 pb-1" type="button">
+                                    <i class="bi-trash3"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-end align-items-baseline  mt-2 mb-sm-2">
+                                <button class="btn btn-outline-primary lh-0 p-2 disabled">
+                                    <i class="bi-dash-lg"></i>
+                                </button>
+                                <div class="mx-2 mx-sm-3 fs-4">1</div>
+                                <button class="btn btn-outline-primary lh-0 p-2">
+                                    <i class="bi-plus-lg"></i>
+                                </button>
+                                <div class="fs-4 ms-3 ms-sm-4">$ 875</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <img class="align-self-start me-1" width="140" src="img/products/airpods-2.webp" alt="">
+                        <div class="d-flex flex-column justify-content-between w-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="fs-5">Apple AirPods 2</div>
+                                    <small class="bg-secondary px-1">ART:778041</small>
+                                </div>
+                                <button class="btn text-danger text-opacity-75 fs-5 lh-0 p-0 ps-1 pb-1" type="button">
+                                    <i class="bi-trash3"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-end align-items-baseline mt-2 mb-sm-2">
+                                <button class="btn btn-outline-primary lh-0 p-2">
+                                    <i class="bi-dash-lg"></i>
+                                </button>
+                                <div class="mx-2 mx-sm-3 fs-4">2</div>
+                                <button class="btn btn-outline-primary lh-0 p-2">
+                                    <i class="bi-plus-lg"></i>
+                                </button>
+                                <div class="fs-4 ms-3 ms-sm-4">$ 250</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <img class="align-self-start me-1" width="140" src="img/products/watch7-midnight.webp" alt="">
+                        <div class="d-flex flex-column justify-content-between w-100">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="fs-5">Apple Watch Series 7 45mm Midnight</div>
+                                    <small class="bg-secondary px-1">ART:792417</small>
+                                </div>
+                                <button class="btn text-danger text-opacity-75 fs-5 lh-0 p-0 ps-1 pb-1" type="button">
+                                    <i class="bi-trash3"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-end align-items-baseline mt-2 mb-sm-2">
+                                <button class="btn btn-outline-primary lh-0 p-2 disabled">
+                                    <i class="bi-dash-lg"></i>
+                                </button>
+                                <div class="mx-2 mx-sm-3 fs-4">1</div>
+                                <button class="btn btn-outline-primary lh-0 p-2">
+                                    <i class="bi-plus-lg"></i>
+                                </button>
+                                <div class="fs-4 ms-3 ms-sm-4">$ 445</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-secondary pt-1">
+                    <div class="d-flex flex-column w-100">
+                        <div class="d-flex justify-content-between fs-4">
+                            <span>Total:</span>
+                            <span>$ 1445</span>
+                        </div>
+                        <button class="btn btn-primary fs-5 mt-2" type="button">Create order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODALS END-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-decoration-none fs-3 " href="./index.html">
+                <span class="text-primary fw-bold">i</span>Gadgets
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <hr class="d-lg-none text-light my-1">
+                <div class="d-flex flex-column-reverse justify-content-between flex-lg-row w-100">
+                    <ul class="navbar-nav mt-md-2 mt-lg-0 align-self-start flex-md-row justify-content-md-between">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">iPhone</a>
+                            <ul class="dropdown-menu dropdown-menu-dark rounded-3 position-absolute">
+                                <li><a class="dropdown-item" href="#">iPhone 13 Pro Max</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 13 Pro</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 13</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 13 Mini</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 12 Pro Max</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 12 Pro</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 12</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 12 Mini</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone 11</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">iPhone SE 2020</a></li>
+                                <li><a class="dropdown-item" href="#">iPhone SE 2022</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">iPad</a>
+                            <ul class="dropdown-menu dropdown-menu-dark rounded-3 position-absolute">
+                                <li><a class="dropdown-item" href="#">Apple iPad</a></li>
+                                <li><a class="dropdown-item" href="#">Apple iPad Air</a></li>
+                                <li><a class="dropdown-item" href="#">Apple iPad Pro</a></li>
+                                <li><a class="dropdown-item" href="#">Apple iPad Mini</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Mac</a>
+                            <ul class="dropdown-menu dropdown-menu-dark rounded-3 position-absolute">
+                                <li><a class="dropdown-item" href="#">MacBook Pro</a></li>
+                                <li><a class="dropdown-item" href="#">MacBook Air</a></li>
+                                <li><a class="dropdown-item" href="#">Mac mini</a></li>
+                                <li><a class="dropdown-item" href="#">iMac</a></li>
+                                <li><a class="dropdown-item" href="#">Apple Mac Studio</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Apple Watch</a>
+                            <ul class="dropdown-menu dropdown-menu-dark rounded-3 position-absolute">
+                                <li><a class="dropdown-item" href="#">Apple Watch Series 7</a></li>
+                                <li><a class="dropdown-item" href="#">Apple Watch SE</a></li>
+                                <li><a class="dropdown-item" href="#">Apple Watch Series 6</a></li>
+                                <li><a class="dropdown-item" href="#">Apple Watch Series 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">AirPods</a>
+                            <ul class="dropdown-menu dropdown-menu-dark rounded-3 position-absolute">
+                                <li><a class="dropdown-item" href="#">Apple AirPods</a></li>
+                                <li><a class="dropdown-item" href="#">Apple AirPods Pro</a></li>
+                                <li><a class="dropdown-item" href="#">Apple AirPods Max</a></li>
+                                <li><a class="dropdown-item" href="#">Colored AirPods</a></li>
+                                <li><a class="dropdown-item" href="#">AirPods Equipment</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Accessories</a>
+                            <ul class="dropdown-menu dropdown-menu-dark rounded-3 position-absolute">
+                                <li><a class="dropdown-item" href="#">Accessories for iPhone</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories for iPad</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories for Mac</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories for AirPods</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories for Watch</a></li>
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="#search-modal" class="text-primary mx-2 text-decoration-none" data-bs-toggle="modal">
+                            <i class="bi-search fs-4"></i>
+                        </a>
+                        <a href="tel:0-800-707-07-07" class="link-primary mx-2">
+                            <i class="bi-telephone fs-4"></i>
+                        </a>
+                        <!--                        <a href="#" class="link-primary mx-2"><i class="bi-cart fs-4"></i></a>-->
+                        <!--                        <button class="btn btn-outline-primary mx-2" data-bs-toggle="modal"-->
+                        <!--                                data-bs-target="#sign-up-modal">Sign Up-->
+                        <!--                        </button>-->
+                        <!--                        <button id="log-in-btn-popover" class="btn btn-primary ms-2" data-bs-toggle="popover">-->
+                        <!--                            Log In-->
+                        <!--                        </button>-->
+                        <!-- FOR AUTH USERS -->
+                        <a href="#cart-modal" class="text-primary mx-2 position-relative" data-bs-toggle="modal">
+                            <i class="bi-cart fs-4"></i>
+                            <span class="position-absolute top-50 start-50 translate-y badge rounded-pill bg-light text-dark">
+                                                                                3
+                                                                            </span>
+                        </a>
+                        <div class="dropdown">
+                            <button type="button" data-bs-toggle="dropdown"
+                                    class="btn btn-sm rounded-3 btn-outline-primary fs-5  ms-3 dropdown-toggle">
+                                <i class="bi-person-fill"></i> Oliver
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark mt-1 py-1">
+                                <li><a href="#" class="dropdown-item"><i class="bi-bag-check"></i> My orders</a></li>
+                                <li><a href="#" class="dropdown-item"><i class="bi-sliders"></i> Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider my-1">
+                                </li>
+                                <li><a href="#" class="dropdown-item text-danger">
+                                    <i class="bi-box-arrow-right"></i> Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-grow-1 container my-3 my-lg-4 text-light">
+    <div class="row g-2 g-lg-3">
+        <nav class="col-12 col-lg-9 col-xl-10 order-0 pe-lg-0">
+            <ol class="breadcrumb bg-dark rounded-1 p-2 mb-0" id="border-right-radius-lg-0">
+                <li class="breadcrumb-item"><a href="#" class="link-primary text-decoration-none">
+                    <i class="bi-house-door"></i> Home</a>
+                </li>
+                <li class="breadcrumb-item text-light">Apple iPhone</li>
+            </ol>
+        </nav>
+        <div class="col-12 col-lg-3 order-lg-2">
+            <div class="accordion collapse show sticky-lg-top" id="filter-accordion" style="top: 80px">
+                <div class="accordion-item bg-dark mb-2 mb-lg-3 bg-dark">
+                    <h2 class="accordion-header">
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#model-panel"
+                                class="accordion-button text-light fw-bold"> Model
+                        </button>
+                    </h2>
+                    <div id="model-panel" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-13-pro-max" id="iphone-13-pro-max"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-13-pro-max">iPhone 13 Pro Max</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-13-pro" id="iphone-13-pro"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-13-pro">iPhone 13 Pro</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-13" id="iphone-13"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-13">iPhone 13</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-13-mini" id="iphone-13-mini"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-13-mini">iPhone 13 Mini</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-12-pro-max" id="iphone-12-pro-max"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-12-pro-max">iPhone 12 Pro Max</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-12-pro" id="iphone-12-pro"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-12-pro">iPhone 12 Pro</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-12" id="iphone-12"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-12">iPhone 12</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-12-mini" id="iphone-12-mini"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-12-mini">iPhone 12 Mini</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-11" id="iphone-11"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-11">iPhone 11</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-xr" id="iphone-xr"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-xr">iPhone XR</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-se-2022" id="iphone-se-2022"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-se-2022">iPhone SE 2022</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="iphone-se-2020" id="iphone-se-2020"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="iphone-se-2020">iPhone SE 2020</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark mb-2 mb-lg-3 bg-dark">
+                    <h2 class="accordion-header">
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#memory-panel"
+                                class="accordion-button collapsed text-light fw-bold"> Memory
+                        </button>
+                    </h2>
+                    <div id="memory-panel" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="1024" id="1024gb"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="1024gb">1 TB</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="512" id="512gb"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="512gb">512 GB</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="256" id="256gb"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="256gb">256 GB</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="128" id="128gb"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="128gb">128 GB</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="64" id="64gb"
+                                       class="form-check-input rounded-1 me-3">
+                                <label class="form-check-label" for="64gb">64 GB</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark mb-2 mb-lg-3 bg-dark">
+                    <h2 class="accordion-header">
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#color-panel"
+                                class="accordion-button collapsed text-light fw-bold"> Color
+                        </button>
+                    </h2>
+                    <div id="color-panel" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="alpine-green" id="alpine-green"
+                                       style="background-color: #00493C"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="alpine-green">Alpine Green</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="black" id="black" style="background-color: #000000"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="black">Black</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="blue" id="blue" style="background-color: #0000ff"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="blue">Blue</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="gold" id="gold" style="background-color: #f4d2b9"
+                                       class="form-check-input rounded-1 me-3 border-secondary check-invert ">
+                                <label class="form-check-label" for="gold">Gold</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="graphite" id="graphite" style="background-color: #595955"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="graphite">Graphite</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="green" id="green" style="background-color: #4bc062"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="green">Green</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="midnight" id="midnight" style="background-color: #0d1b3a"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="midnight">Midnight</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="pacific-blue" id="pacific-blue"
+                                       style="background-color: #4a5a68"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="pacific-blue">Pacific Blue</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="pink" id="pink" style="background-color: #FA8072"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="pink">Pink</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="purple" id="purple" style="background-color: #bdb2e1"
+                                       class="form-check-input rounded-1 me-3 border-secondary check-invert">
+                                <label class="form-check-label" for="purple">Purple</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="red" id="red" style="background-color: #ff0000"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="red">Red</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="sierra-blue" id="sierra-blue"
+                                       style="background-color: #51A0D5"
+                                       class="form-check-input rounded-1 me-3 border">
+                                <label class="form-check-label" for="sierra-blue">Sierra Blue</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="silver" id="silver" style="background-color: #e9e9e1"
+                                       class="form-check-input rounded-1 me-3 border-secondary check-invert">
+                                <label class="form-check-label" for="silver">Silver</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="starlight" id="starlight"
+                                       style="background-color: #ffffff"
+                                       class="form-check-input rounded-1 me-3 border-secondary check-invert">
+                                <label class="form-check-label" for="starlight">Starlight</label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input type="checkbox" value="white" id="white" style="background-color: #ffffff"
+                                       class="form-check-input rounded-1 me-3 border-secondary check-invert">
+                                <label class="form-check-label" for="white">White</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark rounded-1 w-100 bi-x-lg"> Clear Filter</button>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 col-xl-2 order-lg-1 ps-lg-0">
+            <div class="dropdown">
+                <button type="button" data-bs-toggle="dropdown" id="border-left-radius-lg-0"
+                        class="btn bg-dark rounded-1 text-light w-100 dropdown-toggle bi-arrow-down-up shadow-none p-2 border-0">
+                    Sort by: <span class="text-primary">Popular</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end rounded-1">
+                    <li><a href="#" class="dropdown-item px-4 bi-star-fill active"> Popular</a></li>
+                    <li><a href="#" class="dropdown-item px-4 bi-calendar-range"> Newest</a></li>
+                    <li><a href="#" class="dropdown-item px-4 bi-arrow-up-right"> Price: Low - High</a></li>
+                    <li><a href="#" class="dropdown-item px-4 bi-arrow-down-right"> Price: High - Low</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-lg-9 order-lg-3">
+            <div class="row g-2 g-lg-3 d-flex flex-wrap align-items-start card-transition">
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative">
+                        <img src="img/products/airpods-2.webp" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-xl-3">
+                    <div class="card border-0 bg-dark position-relative" style="">
+                        <img src="img/products/iphone-13-midnight.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-center mb-2">Apple iPhone 13 128gb Midnight</h6>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <span class="fs-5 text-center w-50">$ 875</span>
+                                <a href="#" class="btn btn-primary d-block w-50 stretched-link">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 mt-lg-3">
+                <nav class="">
+                    <ul class="pagination bg-dark rounded-1 justify-content-center mb-0">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link rounded-1" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link rounded-1" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link rounded-1" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link rounded-1" href="#">4</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item">
+                            <a class="page-link rounded-1" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark pt-1 text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-auto col-lg-3 col-xl d-flex justify-content-center justify-content-sm-start justify-content-xl-center">
+                <div class="d-flex flex-column align-items-center align-items-sm-start">
+                    <p class="text-primary mb-1">Information for customers</p>
+                    <ul class="list-unstyled mb-1">
+                        <li><a class="link-light text-decoration-none" href="#">Payment and Delivery</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Return of Goods</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Warranty</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">About iGadgets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="d-sm-none my-2 bg-secondary">
+            <div class="col-12 col-sm-6 col-md-auto col-lg-2 col-xl d-flex justify-content-center justify-content-sm-start justify-content-xl-center">
+                <div class="d-flex flex-column align-items-center align-items-sm-start">
+                    <p class="text-primary mb-1">Contact Us</p>
+                    <ul class="list-unstyled mb-1">
+                        <li class="mb-1"><small>Mon-Sat: <br class="d-none d-lg-block d-xl-none">8:00 AM-7:00 PM</small>
+                        </li>
+                        <li><a class="link-light text-decoration-none" href="tel:0-800-707-07-07">0-800-707-07-07</a>
+                        </li>
+                        <li>
+                            <a href="mailto:support@igadget.ua" class="link-light mb-2 text-decoration-none">
+                                support@igadget.ua
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="d-sm-none my-2 bg-secondary">
+            <div class="col-12 col-sm-6 col-md-auto col-lg-2 col-xl d-flex justify-content-center justify-content-sm-start justify-content-xl-center">
+                <div class="d-flex flex-column align-items-center align-items-sm-start mt-sm-2 mt-md-0">
+                    <p class="text-primary mb-1">Download App</p>
+                    <ul class="list-unstyled mb-1">
+                        <li class="mb-2">
+                            <a href="#" class="text-decoration-none">
+                                <img src="img/google-play-badge.png" width="120" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">
+                                <img src="img/app-store-badge.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="d-sm-none my-2 bg-secondary">
+            <div class="col-12 col-sm-6 col-md-auto col-lg-2 col-xl d-flex justify-content-center justify-content-sm-start justify-content-xl-center">
+                <div class="d-flex flex-column align-items-center align-items-sm-start mt-sm-2 mt-md-0">
+                    <p class="text-primary mb-2">Follow Us</p>
+                    <div class="">
+                        <a href="#" class="btn p-1 me-2 mb-2 fs-4 lh-0" style="background: #1DA1F2;">
+                            <i class="bi-twitter text-white"></i>
+                        </a><a href="#" class="btn p-1 me-2 mb-2 fs-4 lh-0" style="background: #3b5998;">
+                        <i class="bi-facebook text-white"></i>
+                    </a><a href="#" class="btn p-1 me-2 mb-2 fs-4 lh-0 btn-light">
+                        <i class="bi-telegram" style="color: #229ED9;"></i>
+                    </a><br class="d-none d-md-block d-xl-none"><a href="#" class="btn p-1 me-2 mb-2 fs-4 lh-0"
+                                                                   style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); border-top-color: #285AEB">
+                        <i class="bi-instagram text-white"></i>
+                    </a><a href="#" class="btn p-1 mb-2 fs-4 lh-0 btn-light">
+                        <i class="bi-youtube" style="color: #ff0000;"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="d-sm-none my-2 bg-secondary">
+            <div class="col-12 col-lg-3 col-xl d-flex justify-content-center align-items-lg-center order-lg-first">
+                <div class="d-inline-block text-center">
+                    <a href="#" class="text-decoration-none text-white fs-4">
+                        <span class="text-primary fw-bold">i</span>Gadgets
+                    </a><br class="d-none d-lg-block">
+                    <span class="text-white mb-2">&copy; 2015-2022</span>
+                    <div>
+                        <img src="img/mastercard-logo.svg" alt="mastercard-verified">
+                        <img src="img/visa-logo.svg" alt="visa-verified">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+<script src="./js/form-validation.js"></script>
+<script src="./js/popovers-config.js"></script>
+<script src="./js/slick-config.js"></script>
+</body>
+</html>

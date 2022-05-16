@@ -11,5 +11,5 @@ document.querySelector('#sign-up-form.needs-validation').addEventListener('submi
 
         event.stopPropagation();
         event.preventDefault();
-        this.classList.add("was-validated")
+        this.classList.add("was-validated");
     }, false);
