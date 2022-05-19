@@ -11,7 +11,7 @@ new bootstrap.Popover(
 <label for="log-in-pw-input" class="text-light">Password:</label><br>
 <input type="password" class="form-control p-1 px-2" id="log-in-pw-input" placeholder="********">
 <a href="#" class="link-warning">Forgot Password?</a>
-<button type="submit" class="btn btn-sm btn-warning mt-2 w-100">Log In</button>
+<button type="submit" class="btn btn-sm btn-warning mt-2 w-100 fw-bold">Log In</button>
 `
     }
 );
