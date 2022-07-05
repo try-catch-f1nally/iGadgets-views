@@ -85,6 +85,10 @@ textarea {
   cursor: pointer;
 }
 
+.form-check-input:disabled + label {
+  cursor: auto;
+}
+
 .form-check-input:checked + label {
   color: $primary;
 }
@@ -177,11 +181,11 @@ textarea {
 }
 
 #up-btn {
-  box-shadow: inset 0 0 4px $dark;
+  box-shadow: 0 0 4px $dark;
   z-index: 10;
   position: absolute;
-  top: 120vh;
-  left: 91vw;
+  top: 120%;
+  left: calc(100% - 100px);
   transform: scale(0);
   transition: transform .4s;
 }
@@ -189,6 +193,6 @@ textarea {
 #up-btn.scale-1 {
   transform: scale(1);
   position: sticky;
-  top: 86vh;
-  left: 91vw;
+  top: 86%;
+  left: calc(100% - 100px);
 }
